@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #110f0f;
+  overflow: hidden
+}
+
+audio::-webkit-progress-bar{
+  background-color: #110f0f
+}
+.audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: #000;
+     color: #000;
+     }
+
+/* Active Navigation Link */
+.active {
+  @apply text-green-400;
+}
+
+.active svg {
+  @apply text-green-400;
+}
+
+.bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.bar:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.bar:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.bar:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.smooth-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+   /* LOADER ANIMATION*/
+
+   .spinner {
+    margin: auto;
+    width: 200px;
+    height: 50px;
+  }
+  
+  .spinner > div {
+    background:#aca5a5;
+    height: 100%;
+    width: 5px;
+    float: left;
+    margin: 0 5px;
+    animation: stretch 2s infinite;
+    animation-timing-function: cubic-bezier(.62,.28,.23,.99);
+  }
+  
+  .spinner .loader1 {
+    animation-delay: -1s;
+  }
+  
+  .spinner .loader2 {
+    animation-delay: -.9s;
+  }
+  
+  .spinner .loader3 {
+    animation-delay: -.8s;
+  }
+  
+  .spinner .loader4 {
+    animation-delay: -.7s;
+  }
+  
+  .spinner .loader5 {
+    animation-delay: -.6s;
+  }
+  
+  @keyframes stretch {
+    0%, 20%, 49% { 
+      transform: scaleY(0.4);
+      background-color: #aca5a5;
+    }
+    
+    10% { 
+      transform: scaleY(1.0);
+    }
+    
+    50%, 70%, 100% { 
+      transform: scaleY(0.4);
+      background-color: #22c55e;
+    }
+    
+    60% { 
+      transform: scaleY(1.0);
+      background-color: #22c55e;
+    }
+  }
