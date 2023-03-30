@@ -1,6 +1,6 @@
 import React from 'react';
 import {Error,Loader,ArtistCard} from '../components'
-import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useGetTopChartsQuery } from '../redux/services/ShazamCore';
 
 const TopArtists = () => {
     const {data,isFetching,error} = useGetTopChartsQuery();
