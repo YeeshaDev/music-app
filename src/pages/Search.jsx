@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import { Error, Loader, SongCard } from '../components';
-import { useGetSongsBySearchQuery} from '../redux/services/shazamCore';
+import { useGetSongsBySearchQuery} from '../redux/services/ShazamCore';
 
 const Search = () => {
   const { searchTerm } = useParams();

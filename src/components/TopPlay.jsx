@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import { FreeMode } from "swiper";
 import PlayPause from './PlayPause';
 import { playPause, setActiveSong } from '../redux/features/playerSlice';
-import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+import { useGetTopChartsQuery } from '../redux/services/ShazamCore';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -53,7 +53,7 @@ topRef.current.scrollIntoView({ behavior:'smooth'})
   })
   //This shows only the first top five songs
   const topSongs = data?.slice(0,5)
-console.log(topSongs)
+
   const handlePauseBtn = () => {
     dispatch(playPause(false))
     }
@@ -113,7 +113,7 @@ console.log(topSongs)
               style={{ width: '25%', height: 'auto' }}
               className="shadow-lg rounded-full animate-slideright pb-[3rem]"
             >
-              <Link to={`/artists/${artist?.artists[0].adamid}`}>
+              <Link to={`/artists/${artist?.artists[0]?.adamid}`}>
                 <img src={artist?.images?.background} alt="Name" className="rounded-full w-full object-cover" />
               </Link>
             </SwiperSlide>

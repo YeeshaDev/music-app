@@ -29,13 +29,13 @@ dispatch(playPause(true))
 activeSong={activeSong}
  />
     </div>
-<img src={song.images?.coverart}
+<img src={song?.images?.coverart}
 alt='song covers'
 />
   </div>
   <div className="mt-4 flex flex-col">
     <p className="font-bold text-lg truncate">
-      <Link to={`/song/${song?.key}`}>
+      <Link to={`/songs/${song?.key}`}>
       {song.title}
       </Link>
     </p>
