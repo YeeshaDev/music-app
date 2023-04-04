@@ -57,6 +57,14 @@ const playerSlice = createSlice({
     selectGenreListId: (state, action) => {
       state.genreListId = action.payload;
     },
+
+    /*likedSongs:(state,action) => {
+     state.currentIndex = action.payload
+     const item = state.currentSongs.find(
+      (item) =>)
+      state.currentSongs = [...state.currentSongs,item]
+      console.log(item)
+    }*/
   },
 });
 

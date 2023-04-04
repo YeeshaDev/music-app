@@ -98,27 +98,22 @@ topRef.current.scrollIntoView({ behavior:'smooth'})
   <p className="text-gray-400 text-base cursor-pointer mr-6">See more</p>
 </Link>
       </div>
-      <Swiper
-          slidesPerView='auto'
-          spaceBetween={15}
-          freeMode
-          centeredSlides
-          centeredSlidesBounds
-          modules={[FreeMode]}
-          className="mt-4"
+      <div
+      className="flex flex-row gap-4 mt-[1rem] mb-1
+      mx-auto p-3 overflow-x-auto scrollbar-thin 
+      scrollbar-thumb-[#110f0f]"
         >
-          {topSongs?.slice(0, 5).map((artist) => (
-            <SwiperSlide
+          {topSongs?.slice(0, 7).map((artist) => (
+            <div
               key={artist?.key}
-              style={{ width: '25%', height: 'auto' }}
               className="shadow-lg rounded-full animate-slideright pb-[3rem]"
             >
               <Link to={`/artists/${artist?.artists[0]?.adamid}`}>
-                <img src={artist?.images?.background} alt="Name" className="rounded-full w-full object-cover" />
+                <img src={artist?.images?.background} alt="Name" className="rounded-full w-[100%] object-cover" />
               </Link>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </div>
         </div> 
   </div>
   )

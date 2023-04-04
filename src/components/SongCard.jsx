@@ -44,6 +44,7 @@ alt='song covers'
       {song.subtitle}
       </Link>
     </p>
+    <button >Like</button>
 
   </div>
     </div>
